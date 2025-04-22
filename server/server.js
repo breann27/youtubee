@@ -20,6 +20,7 @@ app.use(cors({
 app.use(express.json());
 
 // Connect to MongoDB
+mongoose.set('strictQuery', true);
 mongoose
   .connect(process.env.MONGO_URI, {
      
